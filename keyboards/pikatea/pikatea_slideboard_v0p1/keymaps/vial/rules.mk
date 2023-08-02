@@ -1,0 +1,8 @@
+VIA_ENABLE = yes
+VIAL_ENABLE = yes
+VIAL_INSECURE = yes
+TAP_DANCE_ENABLE = yes
+COMBO_ENABLE = yes
+# firmware reducing
+KEY_OVERRIDE_ENABLE = no
+
