@@ -1,7 +1,7 @@
 {
-    "name": "Pikatea Macropad GB4",
+    "name": "Pikatea Macropad GB5",
     "vendorId": "0x5049",
-    "productId": "0x001B",
+    "productId": "0x0028",
     "customKeycodes": [
       {"name": "Green",
        "title": "Green",
