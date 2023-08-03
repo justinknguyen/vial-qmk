@@ -17,15 +17,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-#include "config_common.h"
-
-/* USB Device descriptor parameter */
-#define VENDOR_ID    0x5049
-#define PRODUCT_ID   0x0028
-#define DEVICE_VER   0x0001
-#define MANUFACTURER Jack_Kester
-#define PRODUCT      Pikatea Macropad GB5
-
 /* key matrix size */
 #define MATRIX_ROWS 2
 #define MATRIX_COLS 8
@@ -42,17 +33,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #define MATRIX_COL_PINS { GP17, GP18, GP19, GP20, GP23, GP24, GP25, GP11  }
 #define MATRIX_ROW_PINS { GP28, NO_PIN }
-#define UNUSED_PINS
 
 /* COL2ROW, ROW2COL */
 #define DIODE_DIRECTION COL2ROW
 
 /* Encoder setup */
-#define ENCODERS 1
-
-#define ENCODERS_PAD_A { GP0 }
-#define ENCODERS_PAD_B { GP1 }
-
 #define ENCODERS_CW_KEY  { { 1, 1 } }
 #define ENCODERS_CCW_KEY { { 0, 1 } }
 
