@@ -17,15 +17,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-#include "config_common.h"
-
-/* USB Device descriptor parameter */
-#define VENDOR_ID    0x5049
-#define PRODUCT_ID   0x0027
-#define DEVICE_VER   0x0001
-#define MANUFACTURER Jack_Kester
-#define PRODUCT      Pikatea Macropad KP17
-
 #define VIAL_KEYBOARD_UID {0xE9, 0xBD, 0xD3, 0xA9, 0xCE, 0x68, 0xAB, 0x99}
 
 /* key matrix size */
@@ -105,7 +96,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define BOOTMAGIC_LITE_ROW 0
 #define BOOTMAGIC_LITE_COLUMN 0
 
-#define ENCODERS_PAD_A {GP28}
-#define ENCODERS_PAD_B {GP26}
 #define ENCODER_RESOLUTION 4
 
