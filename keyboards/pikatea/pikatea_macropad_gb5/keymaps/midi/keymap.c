@@ -13,8 +13,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+#include "action_layer.h"
 #include "keycodes.h"
 #include "keymap_common.h"
+#include "midi.h"
+
 #include QMK_KEYBOARD_H
 
 /*
@@ -30,45 +33,36 @@ int stepAmount = 2;
 // store current layer
 int currentLayer = 0;
 
-#define LAYOUT_midi( \
-    k00, k01, k02, k03, k04, k05, k06, k07,  \
-    E00A, E00B \
-) \
-{ \
-    { k00, k01, k02, k03, k04, k05, k06, k07 }, \
-    { E00A, E00B } \
-}
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [0] = LAYOUT_midi(
+    [0] = LAYOUT(
         TO(6),   TO(5),  TO(4),  TO(3),   TO(2),  TO(1),  TO(0),    KC_MUTE,
         KC_VOLU, KC_VOLD
     ),
-    [1] = LAYOUT_midi(
+    [1] = LAYOUT(
         _______,   _______,   _______,   _______,   _______,    _______,    _______,    _______,
         _______,    _______
     ),
-    [2] = LAYOUT_midi(
+    [2] = LAYOUT(
         _______,   _______,   _______,   _______,   _______,    _______,    _______,    _______,
         _______,    _______
     ),
-    [3] = LAYOUT_midi(
+    [3] = LAYOUT(
         _______,   _______,   _______,   _______,   _______,    _______,    _______,    _______,
         _______,    _______
     ),
-    [4] = LAYOUT_midi(
+    [4] = LAYOUT(
         _______,   _______,   _______,   _______,   _______,    _______,    _______,    _______,
         _______,    _______
     ),
-    [5] = LAYOUT_midi(
+    [5] = LAYOUT(
         _______,   _______,   _______,   _______,   _______,    _______,    _______,    _______,
         _______,    _______
     ),
-    [6] = LAYOUT_midi(
+    [6] = LAYOUT(
         _______,   _______,   _______,   _______,   _______,    _______,    _______,    _______,
         _______,    _______
     ),
-    [7] = LAYOUT_midi(
+    [7] = LAYOUT(
         _______,   _______,   _______,   _______,   _______,    _______,    _______,    _______,
         _______,    _______
     )
