@@ -15,29 +15,20 @@
  */
 #include QMK_KEYBOARD_H
 
-#define LAYOUT_via( \
-    k00, k01, k02, k03, k04, k05, k06, k07,  \
-    E00A, E00B \
-) \
-{ \
-    { k00, k01, k02, k03, k04, k05, k06, k07 }, \
-    { E00A,  E00B } \
-}
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [0] = LAYOUT_via(
+    [0] = LAYOUT(
         KC_F13,   KC_F14,  KC_F15,  KC_F16,   KC_MEDIA_PREV_TRACK,    KC_MEDIA_PLAY_PAUSE,    KC_MEDIA_NEXT_TRACK,    KC_MUTE,
         KC_VOLU, KC_VOLD
     ),
-    [1] = LAYOUT_via(
+    [1] = LAYOUT(
         _______,   _______,   _______,   _______,   _______,    _______,    _______,    _______,
         _______,   _______
     ),
-    [2] = LAYOUT_via(
+    [2] = LAYOUT(
         _______,   _______,   _______,   _______,   _______,    _______,    _______,    _______,
         _______,   _______
     ),
-    [3] = LAYOUT_via(
+    [3] = LAYOUT(
         _______,   _______,   _______,   _______,   _______,    _______,    _______,    _______,
         _______,   _______
     )
