@@ -13,17 +13,68 @@
     "width": 8,
     "height": 1,
     "layouts": {
-        "LAYOUT_all": {
-            "layout": [{"label":"0", "x":0, "y":0}, {"label":"1", "x":1, "y":0}, {"label":"2", "x":2, "y":0}, {"label":"3", "x":3, "y":0}, {"label":"4", "x":4, "y":0}, {"label":"5", "x":5, "y":0}, {"label":"6", "x":6, "y":0}, {"label":"7", "x":7, "y":0}]
+        "LAYOUT": {
+            "layout": [
+                {
+                    "label": "0",
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "label": "1",
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "label": "2",
+                    "x": 2,
+                    "y": 0
+                },
+                {
+                    "label": "3",
+                    "x": 3,
+                    "y": 0
+                },
+                {
+                    "label": "4",
+                    "x": 4,
+                    "y": 0
+                },
+                {
+                    "label": "5",
+                    "x": 5,
+                    "y": 0
+                },
+                {
+                    "label": "6",
+                    "x": 6,
+                    "y": 0
+                },
+                {
+                    "label": "7",
+                    "x": 7,
+                    "y": 0
+                },
+                {
+                    "label": "Encoder 1 A",
+                    "x": 6.5,
+                    "y": 1
+                },
+                {
+                    "label": "Encoder 1 B",
+                    "x": 7.5,
+                    "y": 1
+                }
+            ]
         }
     },
-    "features": {
-        "encoder": true
-    },
     "encoder": {
+        "enable": true,
         "rotary": [
-            { "pin_a": "GP0", "pin_b": "GP1" }
+            {
+                "pin_a": "GP0",
+                "pin_b": "GP1"
+            }
         ]
     }
 }
-

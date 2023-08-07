@@ -13,6 +13,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+#include "action_layer.h"
+#include "keycodes.h"
+#include "keymap_common.h"
+#include "midi.h"
+
 #include QMK_KEYBOARD_H
 
 /*
@@ -29,34 +34,48 @@ int stepAmount = 2;
 int currentLayer = 0;
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [0] = LAYOUT_all(
-        TO(3),   TO(2),  TO(1),  TO(0),   KC_MEDIA_PREV_TRACK,    KC_MEDIA_PLAY_PAUSE,    KC_MEDIA_NEXT_TRACK,    KC_MUTE
+    [0] = LAYOUT(
+        TO(6),   TO(5),  TO(4),  TO(3),   TO(2),  TO(1),  TO(0),    KC_MUTE,
+        KC_VOLU, KC_VOLD
     ),
-    [1] = LAYOUT_all(
-        _______,   _______,   _______,   _______,   _______,    _______,    _______,    _______
+    [1] = LAYOUT(
+        _______,   _______,   _______,   _______,   _______,    _______,    _______,    _______,
+        _______,    _______
     ),
-    [2] = LAYOUT_all(
-        _______,   _______,   _______,   _______,   _______,    _______,    _______,    _______
+    [2] = LAYOUT(
+        _______,   _______,   _______,   _______,   _______,    _______,    _______,    _______,
+        _______,    _______
     ),
-    [3] = LAYOUT_all(
-        _______,   _______,   _______,   _______,   _______,    _______,    _______,    _______
+    [3] = LAYOUT(
+        _______,   _______,   _______,   _______,   _______,    _______,    _______,    _______,
+        _______,    _______
     ),
-    [4] = LAYOUT_all(
-        _______,   _______,   _______,   _______,   _______,    _______,    _______,    _______
+    [4] = LAYOUT(
+        _______,   _______,   _______,   _______,   _______,    _______,    _______,    _______,
+        _______,    _______
     ),
-    [5] = LAYOUT_all(
-        _______,   _______,   _______,   _______,   _______,    _______,    _______,    _______
+    [5] = LAYOUT(
+        _______,   _______,   _______,   _______,   _______,    _______,    _______,    _______,
+        _______,    _______
     ),
-    [6] = LAYOUT_all(
-        _______,   _______,   _______,   _______,   _______,    _______,    _______,    _______
+    [6] = LAYOUT(
+        _______,   _______,   _______,   _______,   _______,    _______,    _______,    _______,
+        _______,    _______
     ),
-    [7] = LAYOUT_all(
-        _______,   _______,   _______,   _______,   _______,    _______,    _______,    _______
+    [7] = LAYOUT(
+        _______,   _______,   _______,   _______,   _______,    _______,    _______,    _______,
+        _______,    _______
     )
 };
 
 //create a virtual Midi Slider with the encoder
 bool encoder_update_user(uint8_t index, bool clockwise) {
+    keypos_t a = { .col = 0, .row = 1 };
+    keypos_t b = { .col = 1, .row = 1 };
+    if (keymap_key_to_keycode(0, a) == KC_VOLD && keymap_key_to_keycode(0, b) == KC_VOLU) {
+        clockwise = !clockwise;
+    }
+
     if (clockwise) {
         val[currentLayer] = val[currentLayer] + stepAmount;
         if (val[currentLayer] > 127) {
@@ -70,7 +89,8 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
         }
         midi_send_cc(&midi_device, currentLayer+1, 7, val[currentLayer]);
     }
-    return true;
+    //We do not want to contiune. we have handled this action
+    return false;
 }
 
 //save the layer state to a variable
@@ -78,4 +98,3 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     currentLayer = get_highest_layer(state);
     return state;
 }
-
