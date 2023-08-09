@@ -10,18 +10,18 @@
   "layouts": {
     "labels":[
       [
-          "Top Right Corner",
+          "Bottom Right Corner",
           "all 1u keys",
           "2u key (numpad)",
           "Knob"
       ],
       [
-          "Bottom Right Corner",
+          "Bottom Left Corner",
           "1u keys",
           "2u key (numpad)"
       ],
       [
-          "Bottom Left Corner",
+          "Top Left Corner",
           "1u keys",
           "2u key (numpad)"
       ]
