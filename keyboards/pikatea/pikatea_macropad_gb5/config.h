@@ -42,7 +42,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define ENCODERS_CCW_KEY { { 0, 1 } }
 
 // /* RBG settings */
-// #define RGB_DI_PIN C6
+// #define WS2812_DI_PIN GP7
+// #define WS2812_BYTE_ORDER WS2812_BYTE_ORDER_RGB
+#define NOP_FUDGE 0.4
+// #define NOP_FUDGE 1
+// #define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_BREATHING
 
 // #ifdef RGB_DI_PIN
 // #    define RGBLED_NUM 7

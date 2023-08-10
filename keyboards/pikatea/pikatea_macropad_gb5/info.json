@@ -76,5 +76,16 @@
                 "pin_b": "GP1"
             }
         ]
+    },
+    "rgblight": {
+        "brightness_steps": 8,
+        "hue_steps": 8,
+        "led_count": 7,
+        "max_brightness": 150,
+        "saturation_steps": 8
+    },
+    "ws2812": {
+        "driver": "vendor",
+        "pin": "GP7"
     }
 }
