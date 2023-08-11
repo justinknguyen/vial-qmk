@@ -106,7 +106,7 @@ def main():
             encoderLinePrep += '            {\n'
             encoderLinePrep += f'                "pin_a": "{encoderPinAArray[i]}",\n'
             encoderLinePrep += f'                "pin_b": "{encoderPinBArray[i]}"\n'
-            if i == len(encoderLinePrep)-1:
+            if i == len(encoderPinAArray)-1:
                 encoderLinePrep += '            }\n'
             else:
                 encoderLinePrep += '            },\n'
