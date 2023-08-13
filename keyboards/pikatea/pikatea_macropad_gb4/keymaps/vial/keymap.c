@@ -16,19 +16,10 @@
 #include QMK_KEYBOARD_H
 #include "rgb_profiles.h"
 
-#define LAYOUT_via( \
-    k00, k01, k02, k03, k04, k05, k06, k07,  \
-    E00A, E00B \
-) \
-{ \
-    { k00, k01, k02, k03, k04, k05, k06, k07 }, \
-    { E00A,  E00B } \
-}
-
 // use the names from vial.json
 enum blender_keycode {
-    RGB_USER_GREEN = USER00,
-    RGB_USER_RED, 
+    RGB_USER_GREEN = QK_KB_0,
+    RGB_USER_RED,
     RGB_USER_BLUE,
     RGB_USER_WHITE,
     RGB_USER_YELLOW,
@@ -38,15 +29,15 @@ enum blender_keycode {
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [0] = LAYOUT_via(
+    [0] = LAYOUT(
         KC_F13,   KC_F14,  KC_F15,  KC_F16,   KC_MEDIA_PREV_TRACK,    KC_MEDIA_PLAY_PAUSE,    KC_MEDIA_NEXT_TRACK,    KC_MUTE,
         KC_VOLU, KC_VOLD
     ),
-    [1] = LAYOUT_via(
+    [1] = LAYOUT(
         _______,   _______,   _______,   _______,   _______,    _______,    _______,    _______,
         _______,   _______
     ),
-    [2] = LAYOUT_via(
+    [2] = LAYOUT(
         _______,   _______,   _______,   _______,   _______,    _______,    _______,    _______,
         _______,   _______
     )
@@ -75,7 +66,7 @@ void update_rgb_layer(uint8_t layer_code) {
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 	switch (keycode) {
 		case RGB_USER_GREEN:
-            if (record->event.pressed) { 
+            if (record->event.pressed) {
                 update_rgb_layer(0);
                 return 0;
             }
@@ -90,7 +81,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 return 0;
             }
         case RGB_USER_WHITE:
-            if (record->event.pressed) { 
+            if (record->event.pressed) {
                 update_rgb_layer(3);
                 return 0;
             }
