@@ -1,4 +1,4 @@
-# pikatea/pikatea_macropad_gb5 midi
+# pikatea/pikatea_macropad_gb4 midi
 
 ![pikatea](https://i.imgur.com/UpcSHLi.png)
 
