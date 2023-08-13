@@ -21,6 +21,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define ENCODERS_CCW_KEY { { 0, 1 } }
 
 /* RBG settings */
+// Not yet available in `info.json`
+#ifdef RGB_MATRIX_ENABLE
+#    define RGB_MATRIX_LED_COUNT RGBLED_NUM
+#endif
+
 #ifdef RGB_DI_PIN
 /*== all animations enable ==*/
 #    define RGBLIGHT_ANIMATIONS

@@ -8,14 +8,24 @@
         "device_version": "0.0.1",
         "no_startup_check": true
     },
-    "url": "http://www.pikatea.com",
-    "maintainer": "Jack Kester",
-    "manufacturer": "Jack Kester",
+    "maintainer": "Jack Kester & cvespa",
     "width": 8,
     "height": 2,
     "matrix_pins": {
-        "cols": ["B6", "B5", "B4", "B1", "B0", "E6", "F0", "D4"],
-        "rows": ["F7", "NO_PIN"]
+        "cols": [
+            "B6",
+            "B5",
+            "B4",
+            "B1",
+            "B0",
+            "E6",
+            "F0",
+            "D4"
+        ],
+        "rows": [
+            "F7",
+            "NO_PIN"
+        ]
     },
     "diode_direction": "COL2ROW",
     "layouts": {
@@ -88,17 +98,84 @@
         "pin": "C6"
     },
     "rgblight": {
-        "animations": {
-            "BREATHING": true
-        },
-        "brightness_steps": 8,
-        "hue_steps": 8,
-        "layers": {
-            "enabled": true
-        },
-        "led_count": 7,
+        "led_count": 7
+    },
+    "rgb_matrix": {
+        "driver": "WS2812",
         "max_brightness": 150,
-        "saturation_steps": 8,
-        "sleep": true
+        "hue_steps": 8,
+        "sat_steps": 8,
+        "val_steps": 8,
+        "layout": [
+            {
+                "flags": 1,
+                "matrix": [
+                    0,
+                    0
+                ],
+                "x": 0,
+                "y": 0
+            },
+            {
+                "flags": 1,
+                "matrix": [
+                    0,
+                    1
+                ],
+                "x": 1,
+                "y": 0
+            },
+            {
+                "flags": 1,
+                "matrix": [
+                    0,
+                    2
+                ],
+                "x": 2,
+                "y": 0
+            },
+            {
+                "flags": 1,
+                "matrix": [
+                    0,
+                    3
+                ],
+                "x": 3,
+                "y": 0
+            },
+            {
+                "flags": 1,
+                "matrix": [
+                    0,
+                    4
+                ],
+                "x": 4,
+                "y": 0
+            },
+            {
+                "flags": 1,
+                "matrix": [
+                    0,
+                    5
+                ],
+                "x": 5,
+                "y": 0
+            },
+            {
+                "flags": 1,
+                "matrix": [
+                    0,
+                    6
+                ],
+                "x": 6,
+                "y": 0
+            }
+        ],
+        "animations": {
+            "solid_color": true
+        }
+    },
+    "features": {
+        "rgb_matrix": true
     }
 }
