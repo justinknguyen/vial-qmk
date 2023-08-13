@@ -44,7 +44,6 @@
             "shortName": "RGB_USER_PURPLE"
         }
     ],
-    "lighting": "qmk_rgblight",
     "matrix": {
         "rows": 2,
         "cols": 8

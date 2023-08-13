@@ -13,8 +13,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+
 #include QMK_KEYBOARD_H
-#include "rgb_profiles.h"
+#include "rgb_matrix.h"
+#include "color.h"
 
 // use the names from vial.json
 enum blender_keycode {
@@ -43,70 +45,53 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     )
 };
 
-void keyboard_post_init_user(void) {
-    // Enable the LED layers
-    rgblight_layers = default_rgb_layers;
-}
-
-void update_rgb_layer(uint8_t layer_code) {
-    // basic limit checking
-    if (layer_code >= NUMBER_OF_RGB_LAYERS) {
-        return;
-    }
-
-    // higher rgblight layers take precedence, so disable them
-    for (int i=layer_code+1; i < NUMBER_OF_RGB_LAYERS; i++) {
-        rgblight_set_layer_state(i, false);
-    }
-
-    // enable the desired rgblight layer
-    rgblight_set_layer_state(layer_code, true);
-}
-
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-	switch (keycode) {
-		case RGB_USER_GREEN:
-            if (record->event.pressed) {
-                update_rgb_layer(0);
-                return 0;
-            }
+int KEY_CODE = RGB_USER_GREEN;
+bool rgb_matrix_indicators_user() {
+    switch (KEY_CODE) {
+        case RGB_USER_GREEN:
+            rgb_matrix_set_color_all(RGB_GREEN);
+            break;
         case RGB_USER_RED:
-            if (record->event.pressed) {
-                update_rgb_layer(1);
-                return 0;
-            }
+            rgb_matrix_set_color_all(RGB_RED);
+            break;
         case RGB_USER_BLUE:
-            if (record->event.pressed) {
-                update_rgb_layer(2);
-                return 0;
-            }
+           rgb_matrix_set_color_all(RGB_BLUE);
+            break;
         case RGB_USER_WHITE:
-            if (record->event.pressed) {
-                update_rgb_layer(3);
-                return 0;
-            }
+            rgb_matrix_set_color_all(RGB_WHITE);
+            break;
         case RGB_USER_YELLOW:
-            if (record->event.pressed) {
-                update_rgb_layer(4);
-                return 0;
-            }
+            rgb_matrix_set_color_all(RGB_YELLOW);
+            break;
         case RGB_USER_ORANGE:
-            if (record->event.pressed) {
-                update_rgb_layer(5);
-                return 0;
-            }
+            rgb_matrix_set_color_all(RGB_ORANGE);
+            break;
         case RGB_USER_CYAN:
-            if (record->event.pressed) {
-                update_rgb_layer(6);
-                return 0;
-            }
+            rgb_matrix_set_color_all(RGB_CYAN);
+            break;
         case RGB_USER_PURPLE:
-            if (record->event.pressed) {
-                update_rgb_layer(7);
-                return 0;
-            }
+            rgb_matrix_set_color_all(RGB_PURPLE);
+            break;
         default:
             return true;
     }
-    return true;
+
+    return false;
+}
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case RGB_USER_GREEN:
+        case RGB_USER_RED:
+        case RGB_USER_BLUE:
+        case RGB_USER_WHITE:
+        case RGB_USER_YELLOW:
+        case RGB_USER_ORANGE:
+        case RGB_USER_CYAN:
+        case RGB_USER_PURPLE:
+            KEY_CODE = keycode;
+            return false;
+        default:
+            return true;
+    }
 }
