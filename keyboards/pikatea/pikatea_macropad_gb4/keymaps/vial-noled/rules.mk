@@ -7,5 +7,6 @@ ENCODER_ENABLE = yes
 KEY_OVERRIDE_ENABLE = yes
 COMBO_ENABLE = yes
 TAP_DANCE_ENABLE = yes
-# no led lights
-RGBLIGHT_ENABLE = no
+# no led
+RGB_MATRIX_ENABLE = no
+VIALRGB_ENABLE = no
