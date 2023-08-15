@@ -27,7 +27,8 @@ enum blender_keycode {
     RGB_USER_YELLOW,
     RGB_USER_ORANGE,
     RGB_USER_CYAN,
-    RGB_USER_PURPLE
+    RGB_USER_PURPLE,
+    RGB_USER_DEFAULT
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -45,51 +46,34 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     )
 };
 
-int KEY_CODE = RGB_USER_GREEN;
-bool rgb_matrix_indicators_user() {
-    switch (KEY_CODE) {
-        case RGB_USER_GREEN:
-            rgb_matrix_set_color_all(RGB_GREEN);
-            break;
-        case RGB_USER_RED:
-            rgb_matrix_set_color_all(RGB_RED);
-            break;
-        case RGB_USER_BLUE:
-           rgb_matrix_set_color_all(RGB_BLUE);
-            break;
-        case RGB_USER_WHITE:
-            rgb_matrix_set_color_all(RGB_WHITE);
-            break;
-        case RGB_USER_YELLOW:
-            rgb_matrix_set_color_all(RGB_YELLOW);
-            break;
-        case RGB_USER_ORANGE:
-            rgb_matrix_set_color_all(RGB_ORANGE);
-            break;
-        case RGB_USER_CYAN:
-            rgb_matrix_set_color_all(RGB_CYAN);
-            break;
-        case RGB_USER_PURPLE:
-            rgb_matrix_set_color_all(RGB_PURPLE);
-            break;
-        default:
-            return true;
-    }
-
-    return false;
-}
-
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case RGB_USER_GREEN:
+            rgb_matrix_mode(RGB_MATRIX_CUSTOM_my_green_effect);
+            return false;
         case RGB_USER_RED:
+            rgb_matrix_mode(RGB_MATRIX_CUSTOM_my_red_effect);
+            return false;
         case RGB_USER_BLUE:
+            rgb_matrix_mode(RGB_MATRIX_CUSTOM_my_blue_effect);
+            return false;
         case RGB_USER_WHITE:
+            rgb_matrix_mode(RGB_MATRIX_CUSTOM_my_white_effect);
+            return false;
         case RGB_USER_YELLOW:
+            rgb_matrix_mode(RGB_MATRIX_CUSTOM_my_yellow_effect);
+            return false;
         case RGB_USER_ORANGE:
+            rgb_matrix_mode(RGB_MATRIX_CUSTOM_my_orange_effect);
+            return false;
         case RGB_USER_CYAN:
+            rgb_matrix_mode(RGB_MATRIX_CUSTOM_my_cyan_effect);
+            return false;
         case RGB_USER_PURPLE:
-            KEY_CODE = keycode;
+            rgb_matrix_mode(RGB_MATRIX_CUSTOM_my_purple_effect);
+            return false;
+        case RGB_USER_DEFAULT:
+            rgb_matrix_mode(RGB_MATRIX_SOLID_COLOR);
             return false;
         default:
             return true;

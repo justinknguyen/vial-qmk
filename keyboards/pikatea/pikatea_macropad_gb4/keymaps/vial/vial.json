@@ -42,8 +42,15 @@
             "name": "Purple",
             "title": "Purple",
             "shortName": "RGB_USER_PURPLE"
+        },
+        {
+            "name": "Default",
+            "title": "Default",
+            "shortName": "RGB_USER_DEFAULT"
+
         }
     ],
+    "lighting": "vialrgb",
     "matrix": {
         "rows": 2,
         "cols": 8
