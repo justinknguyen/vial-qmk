@@ -26,20 +26,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #    define RGB_MATRIX_LED_COUNT RGBLED_NUM
 #endif
 
-#ifdef RGB_DI_PIN
-/*== all animations enable ==*/
-#    define RGBLIGHT_ANIMATIONS
-/*== customize breathing effect ==*/
-/*==== (DEFAULT) use fixed table instead of exp() and sin() ====*/
-#    define RGBLIGHT_BREATHE_TABLE_SIZE 256      // 256(default) or 128 or 64
-/*==== use exp() and sin() ====*/
-#    define RGBLIGHT_EFFECT_BREATHE_CENTER 1.85  // 1 to 2.7
-#    define RGBLIGHT_EFFECT_BREATHE_MAX    255   // 0 to 255
-/* default rgb */
-#    define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_BREATHING
-#endif
-
-/* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
+// Keeping the size down
+#define VIALRGB_NO_DIRECT
 
 /* define if matrix has ghost (lacks anti-ghosting diodes) */
 //#define MATRIX_HAS_GHOST

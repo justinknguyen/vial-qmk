@@ -26,4 +26,5 @@ AUDIO_ENABLE = no           # Audio output
 ENCODER_ENABLE = yes
 LTO_ENABLE = yes
 VIALRGB_ENABLE = yes # Enable keyboard RGB Matrix underglow
+RGB_MATRIX_CUSTOM_KB = yes
 
