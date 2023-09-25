@@ -16,12 +16,12 @@
         "enabled": true,
         "rotary": [
             {
-                "pin_a": "GP1",
-                "pin_b": "GP29"
+                "pin_a": "GP0",
+                "pin_b": "GP1"
             },
             {
-                "pin_a": "GP0",
-                "pin_b": "GP28"
+                "pin_a": "GP28",
+                "pin_b": "GP29"
             }
         ]
     },
