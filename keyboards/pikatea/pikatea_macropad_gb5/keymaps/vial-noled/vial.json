@@ -36,8 +36,8 @@
      "shortName": "RGB_USER_PURPLE"
      }
     ],
-    "lighting": "qmk_rgblight",
-    "matrix": { "rows": 2, "cols": 8 },
+    "lighting": "vialrgb",
+    "matrix": { "rows": 2, "cols": 6 },
     "layouts": {
       "keymap": [
         [
@@ -46,12 +46,10 @@
             "0,2",
             "0,3",
             "0,4",
-            "0,5",
-            "0,6",
             {
                 "x": 1
             },
-            "0,7"
+            "0,5"
         ],
         [
             {

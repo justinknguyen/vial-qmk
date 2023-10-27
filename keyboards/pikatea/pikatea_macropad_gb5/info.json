@@ -10,7 +10,7 @@
     "url": "http://www.pikatea.com",
     "maintainer": "Jack Kester",
     "manufacturer": "Jack Kester",
-    "width": 8,
+    "width": 6,
     "height": 1,
     "layouts": {
         "LAYOUT": {
@@ -43,16 +43,6 @@
                 {
                     "label": "5",
                     "x": 5,
-                    "y": 0
-                },
-                {
-                    "label": "6",
-                    "x": 6,
-                    "y": 0
-                },
-                {
-                    "label": "7",
-                    "x": 7,
                     "y": 0
                 },
                 {

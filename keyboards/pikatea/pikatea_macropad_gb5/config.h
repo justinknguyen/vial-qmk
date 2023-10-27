@@ -19,7 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* key matrix size */
 #define MATRIX_ROWS 2
-#define MATRIX_COLS 8
+#define MATRIX_COLS 6
 
 /*
  * Keyboard Matrix Assignments
@@ -29,9 +29,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * ROWS: AVR pins used for rows, top to bottom
  * DIODE_DIRECTION: COL2ROW = COL = Anode (+), ROW = Cathode (-, marked on diode)
  *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
- *
+ * GP17, GP18, 
  */
-#define MATRIX_COL_PINS { GP17, GP18, GP19, GP20, GP23, GP24, GP25, GP11  }
+#define MATRIX_COL_PINS { GP19, GP20, GP23, GP24, GP25, GP11  }
 #define MATRIX_ROW_PINS { GP28, NO_PIN }
 
 /* COL2ROW, ROW2COL */
@@ -42,37 +42,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define ENCODERS_CCW_KEY { { 0, 1 } }
 
 // /* RBG settings */
-// #define RGB_DI_PIN C6
+#define WS2812_DI_PIN GP18
+#define RGB_MATRIX_LED_COUNT 5
+#define RGB_MATRIX_FRAMEBUFFER_EFFECTS
+#define RGB_MATRIX_KEYPRESSES
+#define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_BREATHING
 
-// #ifdef RGB_DI_PIN
-// #    define RGBLED_NUM 7
-// #    define RGBLIGHT_HUE_STEP 8
-// #    define RGBLIGHT_SAT_STEP 8
-// #    define RGBLIGHT_VAL_STEP 8
-// #    define RGBLIGHT_LIMIT_VAL 150 /* The maximum brightness level */
-// #    define RGBLIGHT_SLEEP  /* If defined, the RGB lighting will be switched off when the host goes to sleep */
-// #    define RGBLIGHT_LAYERS
-// /*== all animations enable ==*/
-// #    define RGBLIGHT_ANIMATIONS
-// /*== or choose animations ==*/
-// // #    define RGBLIGHT_EFFECT_BREATHING
-// // #    define RGBLIGHT_EFFECT_RAINBOW_MOOD
-// // #    define RGBLIGHT_EFFECT_RAINBOW_SWIRL
-// // #    define RGBLIGHT_EFFECT_SNAKE
-// // #    define RGBLIGHT_EFFECT_KNIGHT
-// // #    define RGBLIGHT_EFFECT_CHRISTMAS
-// // #    define RGBLIGHT_EFFECT_STATIC_GRADIENT
-// // #    define RGBLIGHT_EFFECT_RGB_TEST
-// // #    define RGBLIGHT_EFFECT_ALTERNATING
-// /*== customize breathing effect ==*/
-// /*==== (DEFAULT) use fixed table instead of exp() and sin() ====*/
-// #    define RGBLIGHT_BREATHE_TABLE_SIZE 256      // 256(default) or 128 or 64
-// /*==== use exp() and sin() ====*/
-// #    define RGBLIGHT_EFFECT_BREATHE_CENTER 1.85  // 1 to 2.7
-// #    define RGBLIGHT_EFFECT_BREATHE_MAX    255   // 0 to 255
-// /* default rgb */
-// #    define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_BREATHING
-// #endif
+#define NOP_FUDGE 1
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 5
