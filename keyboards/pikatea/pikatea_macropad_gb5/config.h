@@ -19,7 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* key matrix size */
 #define MATRIX_ROWS 2
-#define MATRIX_COLS 8
+#define MATRIX_COLS 6
 
 /*
  * Keyboard Matrix Assignments
@@ -31,11 +31,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
  *
  */
-#define MATRIX_COL_PINS { GP17, GP18, GP19, GP20, GP23, GP24, GP25, GP11  }
-#define MATRIX_ROW_PINS { GP28, NO_PIN }
+// #define MATRIX_COL_PINS { GP19, GP20, GP23, GP24, GP25, GP11  }
+// #define MATRIX_ROW_PINS { GP28, NO_PIN }
 
 /* COL2ROW, ROW2COL */
-#define DIODE_DIRECTION COL2ROW
+// #define DIODE_DIRECTION COL2ROW
 
 /* Encoder setup */
 #define ENCODERS_CW_KEY  { { 1, 1 } }
