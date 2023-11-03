@@ -96,7 +96,7 @@ secrets.tar
 # Python things
 __pycache__
 .python-version
-.venv/
+.venv
 
 # Prerequisites for updating ChibiOS
 /util/fmpp*
@@ -108,3 +108,8 @@ user_song_list.h
 compile_commands.json
 .clangd/
 .cache/
+History/.keyboard-cols-history-file
+History/.keyboard-name-history-file
+History/.keyboard-PRODUCT-ID-history-file
+History/.keyboard-PRODUCT-Name-history-file
+History/.keyboard-rows-history-file

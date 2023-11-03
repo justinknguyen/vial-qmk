@@ -1,0 +1,15 @@
+{
+  "name": "Pikatea Keyboard Funky60",
+  "vendorId": "0x5049",
+  "productId": "0x001D",
+  "lighting": "none",
+  "matrix": {
+    "rows": 5,
+    "cols": 13
+  },
+  "layouts": {
+    "keymap": [
+      
+    ]
+  }
+}
