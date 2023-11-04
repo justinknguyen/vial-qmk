@@ -100,8 +100,17 @@
         "max_brightness": 150,
         "saturation_steps": 8,
         "animations": {
+            "solid": true,
+            "breathing": true,
+            "rainbow_mood": true,
+            "rainbow_swirl": true,
+            "snake": true,
+            "knight": true,
+            "christmas": true,
+            "static_gradient": true,
             "rgb_test": true,
-            "solid": true
+            "alternating": true,
+            "twinkle": true
         }
     },
     "ws2812": {
