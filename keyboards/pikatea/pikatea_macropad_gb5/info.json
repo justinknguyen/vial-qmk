@@ -12,6 +12,18 @@
     "manufacturer": "Jack Kester",
     "width": 6,
     "height": 1,
+    "diode_direction": "COL2ROW",
+    "features": {
+        "bootmagic": true,
+        "command": false,
+        "console": false,
+        "mousekey": false,
+        "extrakey": true,
+        "encoder": true,
+        "rgblight": true,
+        "nkro": false,
+        "lto": true
+    },
     "layouts": {
         "LAYOUT": {
             "layout": [
@@ -47,16 +59,30 @@
                 },
                 {
                     "label": "Encoder 1 A",
-                    "x": 6.5,
+                    "x": 4.5,
                     "y": 1
                 },
                 {
                     "label": "Encoder 1 B",
-                    "x": 7.5,
+                    "x": 5.5,
                     "y": 1
                 }
             ]
         }
+    },
+    "matrix_pins": {
+        "cols": [
+            "GP19",
+            "GP20",
+            "GP23",
+            "GP24",
+            "GP25",
+            "GP11"
+        ],
+        "rows": [
+            "GP28",
+            "NO_PIN"
+        ]
     },
     "encoder": {
         "enable": true,
@@ -66,5 +92,20 @@
                 "pin_b": "GP1"
             }
         ]
+    },
+    "rgblight": {
+        "brightness_steps": 8,
+        "hue_steps": 8,
+        "led_count": 5,
+        "max_brightness": 150,
+        "saturation_steps": 8,
+        "animations": {
+            "rgb_test": true,
+            "solid": true
+        }
+    },
+    "ws2812": {
+        "driver": "vendor",
+        "pin": "GP18"
     }
 }

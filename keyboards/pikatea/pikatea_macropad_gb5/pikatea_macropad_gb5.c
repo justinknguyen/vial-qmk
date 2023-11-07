@@ -37,6 +37,7 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
 }
 #endif
 
+/*
 led_config_t g_led_config = { {
   // Key Matrix to LED Index
   {   0,1,2,3,4, NO_LED },
@@ -48,3 +49,4 @@ led_config_t g_led_config = { {
   // LED Index to Flag
   4, 4, 4, 4, 4
 } };
+*/

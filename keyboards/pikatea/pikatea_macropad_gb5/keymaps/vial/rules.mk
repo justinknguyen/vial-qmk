@@ -5,5 +5,3 @@ VIAL_INSECURE = yes
 KEY_OVERRIDE_ENABLE = yes
 COMBO_ENABLE = yes
 TAP_DANCE_ENABLE = yes
-# no led lights
-VIALRGB_ENABLE = yes

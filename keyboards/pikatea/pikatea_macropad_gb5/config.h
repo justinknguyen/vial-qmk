@@ -29,29 +29,28 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * ROWS: AVR pins used for rows, top to bottom
  * DIODE_DIRECTION: COL2ROW = COL = Anode (+), ROW = Cathode (-, marked on diode)
  *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
- * GP17, GP18, 
+ * GP17, GP18,
  */
-#define MATRIX_COL_PINS { GP19, GP20, GP23, GP24, GP25, GP11  }
-#define MATRIX_ROW_PINS { GP28, NO_PIN }
+
+// #define MATRIX_COL_PINS { GP19, GP20, GP23, GP24, GP25, GP11  }
+// #define MATRIX_ROW_PINS { GP28, NO_PIN }
+
 
 /* COL2ROW, ROW2COL */
-#define DIODE_DIRECTION COL2ROW
+// #define DIODE_DIRECTION COL2ROW
 
 /* Encoder setup */
 #define ENCODERS_CW_KEY  { { 1, 1 } }
 #define ENCODERS_CCW_KEY { { 0, 1 } }
 
 // /* RBG settings */
-#define WS2812_DI_PIN GP18
-#define RGB_MATRIX_LED_COUNT 5
+// #define WS2812_DI_PIN GP7
+// #define WS2812_BYTE_ORDER WS2812_BYTE_ORDER_RGB
+#define NOP_FUDGE 0.4
+// #define NOP_FUDGE 1
+// #define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_BREATHING
 
-#ifdef WS2812_DI_PIN	
-#    define RGBLED_NUM 5
-#    define RGBLIGHT_HUE_STEP 8
-#    define RGBLIGHT_SAT_STEP 8
-#    define RGBLIGHT_VAL_STEP 8
-#    define RGBLIGHT_LIMIT_VAL 150 /* The maximum brightness level */
-// #    define RGBLIGHT_SLEEP  /* If defined, the RGB lighting will be switched off when the host goes to sleep */
+#ifdef WS2812_DI_PIN
 #    define RGBLIGHT_LAYERS
 /*== all animations enable ==*/
 #    define RGBLIGHT_ANIMATIONS
@@ -74,8 +73,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* default rgb */
 #    define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_BREATHING
 #endif
-
-#define NOP_FUDGE 0.4
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 5

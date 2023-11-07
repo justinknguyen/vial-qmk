@@ -33,3 +33,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,   _______
     )
 };
+
+void keyboard_post_init_user(void) {
+    sethsv(HSV_WHITE, (LED_TYPE *)&led[0]); // led 0
+    sethsv(HSV_RED,   (LED_TYPE *)&led[1]); // led 1
+    sethsv(HSV_GREEN, (LED_TYPE *)&led[2]); // led 2
+    rgblight_set(); // Utility functions do not call rgblight_set() automatically, so they need to be called explicitly.
+}
