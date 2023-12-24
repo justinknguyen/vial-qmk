@@ -17,14 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-#include "config_common.h"
-
 /* USB Device descriptor parameter */
-#define VENDOR_ID    0x5049
-#define PRODUCT_ID   0x0013
-#define DEVICE_VER   0x0001
-#define MANUFACTURER Jack_Kester
-#define PRODUCT      Pikatea Macropad FK1
 
 #define VIAL_KEYBOARD_UID {0x1D, 0x7D, 0x67, 0xF9, 0xCF, 0xB3, 0x5A, 0xBE}
 #define VIAL_ENCODER_DEFAULT { KC_VOLD, KC_VOLU, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS }
@@ -149,10 +142,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
-
-/* disable these deprecated features by default */
-#define NO_ACTION_MACRO
-#define NO_ACTION_FUNCTION
 
 /* Bootmagic Lite key configuration */
 #define BOOTMAGIC_LITE_ROW 0

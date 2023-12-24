@@ -1,7 +1,13 @@
 {
-    "keyboard_name": "Pikatea Macropad GB3",
+    "keyboard_name": "Pikatea Macropad FK1",
+    "usb": {
+        "pid": "0x0013",
+        "vid": "0x5049",
+        "device_version": "0.0.1"
+    },
     "url": "http://www.pikatea.com",
-    "maintainer": "JackKester",
+    "maintainer": "Jack Kester",
+    "manufacturer": "Jack Kester",
     "width": 6,
     "height": 1,
     "layouts": {
