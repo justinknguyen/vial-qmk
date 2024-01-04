@@ -17,9 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-/* USB Device descriptor parameter */
-
-#define VIAL_KEYBOARD_UID {0x1D, 0x7D, 0x67, 0xF9, 0xCF, 0xB3, 0x5A, 0xBE}
+#define VIAL_KEYBOARD_UID {0x83, 0xDD, 0x20, 0x51, 0x99, 0x6E, 0xE5, 0xA5}
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 5
@@ -34,3 +32,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define BOOTMAGIC_LITE_COLUMN 0
 
 #define ENCODER_RESOLUTION 4
+

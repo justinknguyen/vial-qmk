@@ -15,7 +15,4 @@
  */
 #pragma once
 
-#define DYNAMIC_KEYMAP_LAYER_COUNT 3
-
-#define NO_ACTION_MACRO
-#define NO_ACTION_FUNCTION
+#define DYNAMIC_KEYMAP_LAYER_COUNT 4
