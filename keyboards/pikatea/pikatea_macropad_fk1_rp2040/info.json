@@ -1,1 +1,84 @@
-{"keyboard_name": "pikatea_macropad_fk1_rp2040", "processor": "RP2040", "bootloader": "rp2040", "usb": {"pid": "0x0046", "vid": "0x5049", "device_version": "0.0.1"}, "url": "http://www.pikatea.com", "maintainer": "Jack Kester", "manufacturer": "Jack Kester", "width": 6, "height": 1, "diode_direction": "COL2ROW", "features": {"bootmagic": true, "command": false, "console": false, "mousekey": false, "extrakey": true, "nkro": false, "lto": true, "encoder": true}, "matrix_pins": {"cols": ["GP2", "GP3", "GP4", "GP5", "GP6", "GP7"], "rows": ["GP0"]}, "encoder": {"enable": true, "rotary": [{"pin_a": "GP8", "pin_b": "GP9"}]}, "layouts": {"LAYOUT": {"layout": [{"label": "0,0", "x": 0, "y": 0}, {"label": "0,1", "x": 0, "y": 1}, {"label": "0,2", "x": 0, "y": 2}, {"label": "0,3", "x": 0, "y": 3}, {"label": "0,4", "x": 0, "y": 4}, {"label": "0,5", "x": 0, "y": 5}]}}}
+{
+    "keyboard_name": "pikatea_macropad_fk1_rp2040",
+    "processor": "RP2040",
+    "bootloader": "rp2040",
+    "usb": {
+        "pid": "0x0046",
+        "vid": "0x5049",
+        "device_version": "0.0.1"
+    },
+    "url": "http://www.pikatea.com",
+    "maintainer": "Jack Kester",
+    "manufacturer": "Jack Kester",
+    "width": 6,
+    "height": 1,
+    "diode_direction": "COL2ROW",
+    "features": {
+        "bootmagic": true,
+        "command": false,
+        "console": false,
+        "mousekey": false,
+        "extrakey": true,
+        "nkro": false,
+        "lto": true,
+        "encoder": true
+    },
+    "matrix_pins": {
+        "cols": [
+            "GP2",
+            "GP3",
+            "GP4",
+            "GP5",
+            "GP6",
+            "GP7"
+        ],
+        "rows": [
+            "GP0"
+        ]
+    },
+    "encoder": {
+        "enable": true,
+        "rotary": [
+            {
+                "pin_a": "GP8",
+                "pin_b": "GP9"
+            }
+        ]
+    },
+    "layouts": {
+        "LAYOUT": {
+            "layout": [
+                {
+                    "label": "0,0",
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "label": "0,1",
+                    "x": 0,
+                    "y": 1
+                },
+                {
+                    "label": "0,2",
+                    "x": 0,
+                    "y": 2
+                },
+                {
+                    "label": "0,3",
+                    "x": 0,
+                    "y": 3
+                },
+                {
+                    "label": "0,4",
+                    "x": 0,
+                    "y": 4
+                },
+                {
+                    "label": "0,5",
+                    "x": 0,
+                    "y": 5
+                }
+            ]
+        }
+    }
+}
