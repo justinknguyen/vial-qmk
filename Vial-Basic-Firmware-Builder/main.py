@@ -199,6 +199,8 @@ def main():
     encoderNumberTemp = int(encoderNumber)
     encoderCount = 0
     jsonString = ""
+    if len(rows) < encoderNumberTemp:
+        print('\033[91m' + 'Not enough rows for all encoders in Vial.json' + '\033[0m')
     for row in range(len(rows)):
         jsonString += "[\n"
         for col in range(len(cols)):
