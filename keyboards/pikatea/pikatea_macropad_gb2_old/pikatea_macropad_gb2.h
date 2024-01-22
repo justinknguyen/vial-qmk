@@ -26,8 +26,9 @@
  * The second converts the arguments into a two-dimensional array which
  * represents the switch matrix.
  */
-#define LAYOUT( \
-K00, K01, K02, K03, K04, K05  \
-) { \
-{ K00, K01, K02, K03, K04, K05 }  \
+#define LAYOUT_all( \
+    k00, k01, k02, k03, k04, k05  \
+) \
+{ \
+    { k00, k01, k02, k03, k04, k05 } \
 }
