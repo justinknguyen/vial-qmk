@@ -28,10 +28,10 @@ enum layer_number {
 // };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [_BASE] = LAYOUT_all(
+    [_BASE] = LAYOUT(
         KC_1,   KC_2,   KC_MEDIA_PREV_TRACK,    KC_MEDIA_PLAY_PAUSE,    KC_MEDIA_NEXT_TRACK,    KC_6
     ),
-    [_LOWER] = LAYOUT_all(
+    [_LOWER] = LAYOUT(
         KC_TRNS,   KC_TRNS,   KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS
     )
 };

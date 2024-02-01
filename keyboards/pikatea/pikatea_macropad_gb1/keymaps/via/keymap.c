@@ -16,13 +16,13 @@
 #include QMK_KEYBOARD_H
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [0] = LAYOUT_all(
+    [0] = LAYOUT(
         KC_F13,   KC_F14,   KC_MEDIA_PREV_TRACK,    KC_MEDIA_PLAY_PAUSE,    KC_MEDIA_NEXT_TRACK,    KC_MUTE
     ),
-    [1] = LAYOUT_all(
+    [1] = LAYOUT(
         _______,   _______,   _______,    _______,    _______,    _______
     ),
-    [2] = LAYOUT_all(
+    [2] = LAYOUT(
         _______,   _______,   _______,    _______,    _______,    _______
     )
 };
