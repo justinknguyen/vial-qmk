@@ -1,0 +1,16 @@
+{
+    "keyboard_name": "Pikatea Macropad R26",
+    "processor": "atmega32u4",
+    "bootloader": "caterina",
+    "usb": {
+        "vid": "0x5049"
+    },
+    "diode_direction": "COL2ROW",
+    "features": {
+        "bootmagic": true,
+        "mousekey": true,
+        "extrakey": true,
+        "encoder": true,
+        "lto": true
+    }
+}
