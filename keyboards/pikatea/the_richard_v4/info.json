@@ -1,0 +1,100 @@
+{
+    "keyboard_name": "the_richard_v4",
+    "processor": "RP2040",
+    "bootloader": "rp2040",
+    "usb": {
+        "pid": "0x0035",
+        "vid": "0x5049",
+        "device_version": "0.0.1"
+    },
+    "url": "http://www.pikatea.com",
+    "maintainer": "Jack Kester",
+    "manufacturer": "Jack Kester",
+    "width": 1,
+    "height": 8,
+    "diode_direction": "COL2ROW",
+    "features": {
+        "bootmagic": true,
+        "command": false,
+        "console": false,
+        "mousekey": false,
+        "extrakey": true,
+        "nkro": false,
+        "lto": true,
+        "encoder": true
+    },
+    "matrix_pins": {
+        "cols": [
+            "GP26"
+        ],
+        "rows": [
+            "GP11",
+            "GP27",
+            "GP28",
+            "GP10",
+            "GP3",
+            "GP4",
+            "GP2",
+            "GP9"
+        ]
+    },
+    "encoder": {
+        "enable": true,
+        "rotary": [
+            {
+                "pin_a": "GP5",
+                "pin_b": "GP6"
+            },
+            {
+                "pin_a": "GP7",
+                "pin_b": "GP8"
+            }
+        ]
+    },
+    "layouts": {
+        "LAYOUT": {
+            "layout": [
+                {
+                    "label": "0,0",
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "label": "1,0",
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "label": "2,0",
+                    "x": 2,
+                    "y": 0
+                },
+                {
+                    "label": "3,0",
+                    "x": 3,
+                    "y": 0
+                },
+                {
+                    "label": "4,0",
+                    "x": 4,
+                    "y": 0
+                },
+                {
+                    "label": "5,0",
+                    "x": 5,
+                    "y": 0
+                },
+                {
+                    "label": "6,0",
+                    "x": 6,
+                    "y": 0
+                },
+                {
+                    "label": "7,0",
+                    "x": 7,
+                    "y": 0
+                }
+            ]
+        }
+    }
+}
