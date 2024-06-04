@@ -1,0 +1,181 @@
+{
+    "keyboard_name": "pikatea_macropad_custom_rp2040_0",
+    "processor": "RP2040",
+    "bootloader": "rp2040",
+    "usb": {
+        "pid": "0x0032",
+        "vid": "0x5049",
+        "device_version": "0.0.1"
+    },
+    "url": "http://www.pikatea.com",
+    "maintainer": "Jack Kester",
+    "manufacturer": "Jack Kester",
+    "width": 24,
+    "height": 1,
+    "diode_direction": "COL2ROW",
+    "features": {
+        "bootmagic": true,
+        "command": false,
+        "console": false,
+        "mousekey": false,
+        "extrakey": true,
+        "nkro": false,
+        "lto": true
+    },
+    "matrix_pins": {
+        "direct": [
+            [
+                "GP11",
+                "GP29",
+                "GP28",
+                "GP27",
+                "GP26",
+                "GP22",
+                "GP20",
+                "GP23",
+                "GP21",
+                "GP16",
+                "GP15",
+                "GP14",
+                "GP13",
+                "GP12",
+                "GP9",
+                "GP8",
+                "GP7",
+                "GP6",
+                "GP5",
+                "GP4",
+                "GP3",
+                "GP2",
+                "GP1",
+                "GP0"
+            ]
+        ]
+    },
+    "layouts": {
+        "LAYOUT": {
+            "layout": [
+                {
+                    "label": "0,0",
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "label": "0,1",
+                    "x": 0,
+                    "y": 1
+                },
+                {
+                    "label": "0,2",
+                    "x": 0,
+                    "y": 2
+                },
+                {
+                    "label": "0,3",
+                    "x": 0,
+                    "y": 3
+                },
+                {
+                    "label": "0,4",
+                    "x": 0,
+                    "y": 4
+                },
+                {
+                    "label": "0,5",
+                    "x": 0,
+                    "y": 5
+                },
+                {
+                    "label": "0,6",
+                    "x": 0,
+                    "y": 6
+                },
+                {
+                    "label": "0,7",
+                    "x": 0,
+                    "y": 7
+                },
+                {
+                    "label": "0,8",
+                    "x": 0,
+                    "y": 8
+                },
+                {
+                    "label": "0,9",
+                    "x": 0,
+                    "y": 9
+                },
+                {
+                    "label": "0,10",
+                    "x": 0,
+                    "y": 10
+                },
+                {
+                    "label": "0,11",
+                    "x": 0,
+                    "y": 11
+                },
+                {
+                    "label": "0,12",
+                    "x": 0,
+                    "y": 12
+                },
+                {
+                    "label": "0,13",
+                    "x": 0,
+                    "y": 13
+                },
+                {
+                    "label": "0,14",
+                    "x": 0,
+                    "y": 14
+                },
+                {
+                    "label": "0,15",
+                    "x": 0,
+                    "y": 15
+                },
+                {
+                    "label": "0,16",
+                    "x": 0,
+                    "y": 16
+                },
+                {
+                    "label": "0,17",
+                    "x": 0,
+                    "y": 17
+                },
+                {
+                    "label": "0,18",
+                    "x": 0,
+                    "y": 18
+                },
+                {
+                    "label": "0,19",
+                    "x": 0,
+                    "y": 19
+                },
+                {
+                    "label": "0,20",
+                    "x": 0,
+                    "y": 20
+                },
+                {
+                    "label": "0,21",
+                    "x": 0,
+                    "y": 21
+                },
+                {
+                    "label": "0,22",
+                    "x": 0,
+                    "y": 22
+                },
+                {
+                    "label": "0,23",
+                    "x": 0,
+                    "y": 23
+                }
+            ]
+        }
+    }
+}

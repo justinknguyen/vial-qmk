@@ -13,23 +13,21 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-#include QMK_KEYBOARD_H
 
-const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [0] = LAYOUT(
-        KC_F15,  KC_F16,   KC_MEDIA_PREV_TRACK,    KC_MEDIA_PLAY_PAUSE,    KC_MEDIA_NEXT_TRACK,    KC_MUTE,
-        KC_VOLD, KC_VOLU
-    ),
-    [1] = LAYOUT(
-        _______,    _______,    _______,    _______,    _______,    _______,
-        _______,    _______
-    ),
-    [2] = LAYOUT(
-        _______,    _______,    _______,    _______,    _______,    _______,
-        _______,    _______
-    ),
-    [3] = LAYOUT(
-        _______,    _______,    _______,    _______,    _______,    _______,
-        _______,    _______
-    )
-};
+#pragma once
+
+#include "quantum.h"
+
+/* This is a shortcut to help you visually see your layout.
+ *
+ * The first section contains all of the arguments representing the physical
+ * layout of the board and position of the keys.
+ *
+ * The second converts the arguments into a two-dimensional array which
+ * represents the switch matrix.
+ */
+#define LAYOUT( \
+K00, K01, K02, K03, K04, K05, K06, K07, K08, K09, K010, K011, K012, K013, K014, K015, K016, K017  \
+) { \
+{ K00, K01, K02, K03, K04, K05, K06, K07, K08, K09, K010, K011, K012, K013, K014, K015, K016, K017 }  \
+}
