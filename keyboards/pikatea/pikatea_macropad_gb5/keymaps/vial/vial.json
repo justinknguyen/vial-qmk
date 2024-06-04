@@ -2,7 +2,55 @@
     "name": "Pikatea Macropad GB5",
     "vendorId": "0x5049",
     "productId": "0x0028",
-    "lighting": "qmk_rgblight",
+    "customKeycodes": [
+      {
+          "name": "Green",
+          "title": "Green",
+          "shortName": "RGB_USER_GREEN"
+      },
+      {
+          "name": "Red",
+          "title": "Red",
+          "shortName": "RGB_USER_RED"
+      },
+      {
+          "name": "Blue",
+          "title": "Blue",
+          "shortName": "RGB_USER_BLUE"
+      },
+      {
+          "name": "White",
+          "title": "White",
+          "shortName": "RGB_USER_WHITE"
+      },
+      {
+          "name": "Yellow",
+          "title": "Yellow",
+          "shortName": "RGB_USER_YELLOW"
+      },
+      {
+          "name": "Orange",
+          "title": "Orange",
+          "shortName": "RGB_USER_ORANGE"
+      },
+      {
+          "name": "Cyan",
+          "title": "Cyan",
+          "shortName": "RGB_USER_CYAN"
+      },
+      {
+          "name": "Purple",
+          "title": "Purple",
+          "shortName": "RGB_USER_PURPLE"
+      },
+      {
+          "name": "Default",
+          "title": "Default",
+          "shortName": "RGB_USER_DEFAULT"
+
+      }
+    ],
+    "lighting": "vialrgb",
     "matrix": { "rows": 2, "cols": 6 },
     "layouts": {
       "keymap": [
