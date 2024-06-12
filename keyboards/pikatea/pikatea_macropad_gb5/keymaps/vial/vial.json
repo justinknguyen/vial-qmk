@@ -50,7 +50,7 @@
 
       }
     ],
-    "lighting": "vialrgb",
+    "lighting": "qmk_rgblight",
     "matrix": { "rows": 2, "cols": 6 },
     "layouts": {
       "keymap": [
