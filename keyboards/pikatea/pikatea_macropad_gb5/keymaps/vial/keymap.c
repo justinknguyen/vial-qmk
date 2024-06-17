@@ -15,6 +15,19 @@
  */
 #include QMK_KEYBOARD_H
 
+// use the names from vial.json
+enum blender_keycode {
+    RGB_USER_GREEN = QK_KB_0,
+    RGB_USER_RED,
+    RGB_USER_BLUE,
+    RGB_USER_WHITE,
+    RGB_USER_YELLOW,
+    RGB_USER_ORANGE,
+    RGB_USER_CYAN,
+    RGB_USER_PURPLE,
+    RGB_USER_DEFAULT
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT(
         KC_F15,  KC_F16,   KC_MEDIA_PREV_TRACK,    KC_MEDIA_PLAY_PAUSE,    KC_MEDIA_NEXT_TRACK,    KC_MUTE,
@@ -33,3 +46,37 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,    _______
     )
 };
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case RGB_USER_GREEN:
+            rgb_matrix_mode(RGB_MATRIX_CUSTOM_my_green_effect);
+            return false;
+        case RGB_USER_RED:
+            rgb_matrix_mode(RGB_MATRIX_CUSTOM_my_red_effect);
+            return false;
+        case RGB_USER_BLUE:
+            rgb_matrix_mode(RGB_MATRIX_CUSTOM_my_blue_effect);
+            return false;
+        case RGB_USER_WHITE:
+            rgb_matrix_mode(RGB_MATRIX_CUSTOM_my_white_effect);
+            return false;
+        case RGB_USER_YELLOW:
+            rgb_matrix_mode(RGB_MATRIX_CUSTOM_my_yellow_effect);
+            return false;
+        case RGB_USER_ORANGE:
+            rgb_matrix_mode(RGB_MATRIX_CUSTOM_my_orange_effect);
+            return false;
+        case RGB_USER_CYAN:
+            rgb_matrix_mode(RGB_MATRIX_CUSTOM_my_cyan_effect);
+            return false;
+        case RGB_USER_PURPLE:
+            rgb_matrix_mode(RGB_MATRIX_CUSTOM_my_purple_effect);
+            return false;
+        case RGB_USER_DEFAULT:
+            rgb_matrix_mode(RGB_MATRIX_SOLID_COLOR);
+            return false;
+        default:
+            return true;
+    }
+}
