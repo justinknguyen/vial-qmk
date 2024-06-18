@@ -47,10 +47,9 @@
           "name": "Default",
           "title": "Default",
           "shortName": "RGB_USER_DEFAULT"
-
       }
     ],
-    "lighting": "qmk_rgblight",
+    "lighting": "vialrgb",
     "matrix": { "rows": 2, "cols": 6 },
     "layouts": {
       "keymap": [
