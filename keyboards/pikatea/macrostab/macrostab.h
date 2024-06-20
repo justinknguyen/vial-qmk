@@ -27,7 +27,7 @@
  * represents the switch matrix.
  */
 #define LAYOUT( \
-K00,  K10,  K20,  K30,  K40,  K50,  K60,  K70,  K80,  K90,  K100,  K110,  K120  \
+K00, K01, K02, K03, K04, K05, K06, K07, K08, K09, K010, K011, K012  \
 ) { \
-{ K00,  K10, K20, K30, K40, K50, K60, K70, K80, K90, K100, K110, K120 }  \
+{ K00, K01, K02, K03, K04, K05, K06, K07, K08, K09, K010, K011, K012 }  \
 }

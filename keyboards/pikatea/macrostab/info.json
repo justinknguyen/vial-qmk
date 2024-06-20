@@ -1,7 +1,5 @@
 {
     "keyboard_name": "macrostab",
-    "processor": "RP2040",
-    "bootloader": "rp2040",
     "usb": {
         "pid": "0x0039",
         "vid": "0x5049",
@@ -12,15 +10,13 @@
     "manufacturer": "Jack Kester",
     "width": 13,
     "height": 1,
-    "diode_direction": "COL2ROW",
     "features": {
         "bootmagic": true,
         "command": false,
         "console": false,
         "mousekey": false,
         "extrakey": true,
-        "nkro": false,
-        "lto": true
+        "nkro": false
     },
     "matrix_pins": {
         "direct": [
