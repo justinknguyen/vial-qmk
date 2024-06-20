@@ -80,3 +80,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return true;
     }
 }
+
+void keyboard_post_init_user(void) {
+  // Call the post init code.
+  rgb_matrix_mode(RGB_MATRIX_SOLID_COLOR);
+}
