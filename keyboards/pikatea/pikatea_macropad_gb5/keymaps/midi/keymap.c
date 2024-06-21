@@ -62,7 +62,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 #if defined(ENCODER_MAP_ENABLE)
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
-    [0] =   { ENCODER_CCW_CW(KC_VOLD, KC_VOLU),   },
+    [0] =   { ENCODER_CCW_CW(KC_VOLU, KC_VOLD),   },
     [1] =   { ENCODER_CCW_CW(_______, _______),   },
     [2] =   { ENCODER_CCW_CW(_______, _______),   },
     [3] =   { ENCODER_CCW_CW(_______, _______),   },
@@ -72,6 +72,31 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
     [7] =   { ENCODER_CCW_CW(_______, _______),   },
 };
 #endif
+
+//create a virtual Midi Slider with the encoder
+bool encoder_update_user(uint8_t index, bool clockwise) {
+    keypos_t a = { .col = 0, .row = 1 };
+    keypos_t b = { .col = 1, .row = 1 };
+    if (keymap_key_to_keycode(0, a) == KC_VOLD && keymap_key_to_keycode(0, b) == KC_VOLU) {
+        clockwise = !clockwise;
+    }
+
+    if (clockwise) {
+        val[currentLayer] = val[currentLayer] + stepAmount;
+        if (val[currentLayer] > 127) {
+            val[currentLayer] = 127;
+        }
+        midi_send_cc(&midi_device, currentLayer+1, 7, val[currentLayer]);
+    } else {
+        val[currentLayer] = val[currentLayer] - stepAmount;
+        if (val[currentLayer] < 0) {
+            val[currentLayer] = 0;
+        }
+        midi_send_cc(&midi_device, currentLayer+1, 7, val[currentLayer]);
+    }
+    //We do not want to contiune. we have handled this action
+    return false;
+}
 
 //save the layer state to a variable
 layer_state_t layer_state_set_user(layer_state_t state) {
