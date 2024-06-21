@@ -21,10 +21,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MATRIX_ROWS 2
 #define MATRIX_COLS 6
 
-/* Encoder setup */
-#define ENCODERS_CW_KEY  { { 1, 1 } }
-#define ENCODERS_CCW_KEY { { 0, 1 } }
-
 // /* RBG settings */
 #define NOP_FUDGE 0.4
 

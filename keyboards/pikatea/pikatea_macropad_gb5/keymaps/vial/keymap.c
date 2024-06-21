@@ -30,22 +30,27 @@ enum blender_keycode {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT(
-        KC_F15,  KC_F16,   KC_MEDIA_PREV_TRACK,    KC_MEDIA_PLAY_PAUSE,    KC_MEDIA_NEXT_TRACK,    KC_MUTE,
-        KC_VOLD, KC_VOLU
+        KC_F15,  KC_F16,   KC_MEDIA_PREV_TRACK,    KC_MEDIA_PLAY_PAUSE,    KC_MEDIA_NEXT_TRACK,    KC_MUTE
     ),
     [1] = LAYOUT(
-        _______,    _______,    _______,    _______,    _______,    _______,
-        _______,    _______
+        _______,    _______,    _______,    _______,    _______,    _______
     ),
     [2] = LAYOUT(
-        _______,    _______,    _______,    _______,    _______,    _______,
-        _______,    _______
+        _______,    _______,    _______,    _______,    _______,    _______
     ),
     [3] = LAYOUT(
-        _______,    _______,    _______,    _______,    _______,    _______,
-        _______,    _______
+        _______,    _______,    _______,    _______,    _______,    _______
     )
 };
+
+#if defined(ENCODER_MAP_ENABLE)
+const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
+    [0] =   { ENCODER_CCW_CW(KC_VOLD, KC_VOLU),   },
+    [1] =   { ENCODER_CCW_CW(_______, _______),   },
+    [2] =   { ENCODER_CCW_CW(_______, _______),   },
+    [3] =   { ENCODER_CCW_CW(_______, _______),   },
+};
+#endif
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {

@@ -78,24 +78,6 @@
                     ],
                     "x": 5,
                     "y": 0
-                },
-                {
-                    "label": "Encoder 1 A",
-                    "matrix": [
-                        1,
-                        0
-                    ],
-                    "x": 4.5,
-                    "y": 1
-                },
-                {
-                    "label": "Encoder 1 B",
-                    "matrix": [
-                        1,
-                        1
-                    ],
-                    "x": 5.5,
-                    "y": 1
                 }
             ]
         }
@@ -118,8 +100,8 @@
         "enable": true,
         "rotary": [
             {
-                "pin_a": "GP0",
-                "pin_b": "GP1"
+                "pin_a": "GP1",
+                "pin_b": "GP0"
             }
         ]
     },
