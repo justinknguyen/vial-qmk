@@ -34,3 +34,24 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     )
 };
 
+#if defined(ENCODER_ENABLE)
+bool encoder_update_kb(uint8_t index, bool clockwise) {
+    if (!encoder_update_user(index, clockwise)) {
+        return false;
+    }
+
+    //TODO: cvespa: figure out how to make this dynamic
+    keypos_t a = { .col = 0, .row = 1 };
+    keypos_t b = { .col = 1, .row = 1 };
+
+    uint8_t currentLayer = get_highest_layer(layer_state);
+
+    if (clockwise) {
+        tap_code(keymap_key_to_keycode(currentLayer, a));
+    } else {
+        tap_code(keymap_key_to_keycode(currentLayer, b));
+    }
+    return true;
+}
+#endif
+
