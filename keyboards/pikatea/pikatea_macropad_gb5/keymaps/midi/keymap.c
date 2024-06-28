@@ -36,7 +36,7 @@ int currentLayer = 0;
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT(
         TO(4),  TO(3),  TO(2),  TO(1),  TO(0),  KC_MUTE,
-        KC_VOLU,  KC_VOLD
+        KC_VOLD,  KC_VOLU
     ),
     [1] = LAYOUT(
         _______,    _______,    _______,    _______,    _______,    _______,
