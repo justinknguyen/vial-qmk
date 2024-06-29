@@ -8,7 +8,7 @@
     "url": "http://www.pikatea.com",
     "maintainer": "Jack Kester",
     "manufacturer": "Jack Kester",
-    "width": 13,
+    "width": 14,
     "height": 1,
     "features": {
         "bootmagic": true,
@@ -33,7 +33,8 @@
                 "GP7",
                 "GP9",
                 "GP10",
-                "GP11"
+                "GP11",
+                "GP5"
             ]
         ]
     },
@@ -104,6 +105,11 @@
                     "label": "0,12",
                     "x": 0,
                     "y": 12
+                },
+                {
+                    "label": "0,13",
+                    "x": 0,
+                    "y": 13
                 }
             ]
         }

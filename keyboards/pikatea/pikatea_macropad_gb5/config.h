@@ -52,10 +52,3 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define LOCKING_SUPPORT_ENABLE
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
-
-
-/* vial stuff */
-
-#define VIAL_KEYBOARD_UID {0x74, 0xB0, 0xE5, 0x36, 0x63, 0x73, 0x9D, 0x94}
-
-

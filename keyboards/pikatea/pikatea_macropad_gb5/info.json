@@ -118,27 +118,9 @@
                 "flags": 1,
                 "matrix": [
                     0,
-                    0
+                    4
                 ],
-                "x": 0,
-                "y": 0
-            },
-            {
-                "flags": 1,
-                "matrix": [
-                    0,
-                    1
-                ],
-                "x": 1,
-                "y": 0
-            },
-            {
-                "flags": 1,
-                "matrix": [
-                    0,
-                    2
-                ],
-                "x": 2,
+                "x": 4,
                 "y": 0
             },
             {
@@ -154,18 +136,79 @@
                 "flags": 1,
                 "matrix": [
                     0,
-                    4
+                    2
                 ],
-                "x": 4,
+                "x": 2,
+                "y": 0
+            },
+            {
+                "flags": 1,
+                "matrix": [
+                    0,
+                    1
+                ],
+                "x": 1,
+                "y": 0
+            },
+            {
+                "flags": 1,
+                "matrix": [
+                    0,
+                    0
+                ],
+                "x": 0,
                 "y": 0
             }
         ],
         "animations": {
-            "solid_color": true
+            "breathing": true,
+            "solid_color": true,
+            "alpha_mods": true,
+            "gradient_up_down": true,
+            "gradient_left_right": true,
+            "colorband_sat": true,
+            "colorband_val": true,
+            "colorband_pinwheel_sat": true,
+            "colorband_pinwheel_val": true,
+            "colorband_spiral_sat": true,
+            "colorband_spiral_val": true,
+            "cycle_all": true,
+            "cycle_left_right": true,
+            "cycle_up_down": true,
+            "rainbow_moving_chevron": true,
+            "cycle_out_in": true,
+            "cycle_out_in_dual": true,
+            "cycle_pinwheel": true,
+            "cycle_spiral": true,
+            "dual_beacon": true,
+            "rainbow_beacon": true,
+            "rainbow_pinwheels": true,
+            "flower_blooming": true,
+            "raindrops": true,
+            "jellybean_raindrops": true,
+            "hue_breathing": true,
+            "hue_pendulum": true,
+            "hue_wave": true,
+            "pixel_rain": true,
+            "pixel_flow": true,
+            "pixel_fractal": true,
+            "typing_heatmap": true,
+            "digital_rain": true,
+            "solid_reactive_simple": true,
+            "solid_reactive": true,
+            "solid_reactive_wide": true,
+            "solid_reactive_cross": true,
+            "solid_reactive_nexus": true,
+            "splash": true,
+            "solid_splash": true,
+            "starlight": true,
+            "starlight_dual_sat": true,
+            "starlight_dual_hue": true,
+            "riverflow": true
         }
     },
     "ws2812": {
         "driver": "vendor",
-        "pin": "GP18"
+        "pin": "GP7"
     }
 }
