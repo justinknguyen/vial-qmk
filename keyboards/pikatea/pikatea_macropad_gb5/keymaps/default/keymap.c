@@ -21,22 +21,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_VOLD,   KC_VOLU
     ),
     [1] = LAYOUT(
-        _______,   _______,   _______,    _______,    _______,    _______
+        _______,   _______,   _______,    _______,    _______,    _______,
+        _______,   _______
     ),
     [2] = LAYOUT(
-        _______,   _______,   _______,    _______,    _______,    _______
+        _______,   _______,   _______,    _______,    _______,    _______,
+        _______,   _______
     ),
     [3] = LAYOUT(
-        _______,   _______,   _______,    _______,    _______,    _______
+        _______,   _______,   _______,    _______,    _______,    _______,
+        _______,   _______
     )
-};
-
-#if defined(ENCODER_MAP_ENABLE)
-const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
-    [0] =   { ENCODER_CCW_CW(KC_VOLD, KC_VOLU),   },
-    [1] =   { ENCODER_CCW_CW(_______, _______),   },
-    [2] =   { ENCODER_CCW_CW(_______, _______),   },
-    [3] =   { ENCODER_CCW_CW(_______, _______),   },
 };
 
 #if defined(ENCODER_ENABLE)
@@ -59,4 +54,3 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
     return true;
 }
 #endif
-
