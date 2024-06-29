@@ -47,6 +47,11 @@
           "name": "Default",
           "title": "Default",
           "shortName": "RGB_USER_DEFAULT"
+      },
+      {
+          "name": "My Effect",
+          "title": "My Effect",
+          "shortName": "RGB_MY_EFFECT"
       }
     ],
     "lighting": "vialrgb",

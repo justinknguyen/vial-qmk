@@ -25,7 +25,8 @@ enum blender_keycode {
     RGB_USER_ORANGE,
     RGB_USER_CYAN,
     RGB_USER_PURPLE,
-    RGB_USER_DEFAULT
+    RGB_USER_DEFAULT,
+    RGB_MY_EFFECT
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -84,6 +85,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return false;
         case RGB_USER_DEFAULT:
             rgb_matrix_mode(RGB_MATRIX_SOLID_COLOR);
+            return false;
+        case RGB_MY_EFFECT:
+            rgb_matrix_mode(RGB_MATRIX_CUSTOM_my_effect);
             return false;
         default:
             return true;
