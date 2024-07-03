@@ -96,5 +96,5 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 void keyboard_post_init_user(void) {
   // Call the post init code.
-  rgb_matrix_mode(RGB_MATRIX_SOLID_COLOR);
+  rgb_matrix_mode(RGB_MATRIX_CUSTOM_my_effect);
 }

@@ -68,7 +68,7 @@ static bool my_effect(effect_params_t* params) {
     RGB_MATRIX_USE_LIMITS(led_min, led_max);
 
     // Define the brightness level (0 to 255)
-    uint8_t brightness = 80;
+    uint8_t brightness = 60;
 
     uint8_t scale_color(uint8_t color, uint8_t brightness) {
         return (color * brightness) / 255;
