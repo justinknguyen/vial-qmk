@@ -1,6 +1,7 @@
 #pragma once
 
 #define DYNAMIC_KEYMAP_LAYER_COUNT 4
+#define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_VIALRGB_DIRECT
 
 /* vial stuff */
 #define VIAL_KEYBOARD_UID {0x74, 0xB0, 0xE5, 0x36, 0x63, 0x73, 0x9D, 0x94}
