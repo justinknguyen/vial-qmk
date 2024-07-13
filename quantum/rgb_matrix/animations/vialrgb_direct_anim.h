@@ -41,7 +41,7 @@ bool VIALRGB_DIRECT(effect_params_t* params) {
         {128, 255, rgb_matrix_config.hsv.v}  // Cyan
     };
 
-    for (uint8_t i = 0; i < 5; i++) {
+    for (uint8_t i = led_min; i < led_max; i++) {
         RGB rgb = rgb_matrix_hsv_to_rgb(hsv_colors[i]);
         rgb_matrix_set_color(i, rgb.r, rgb.g, rgb.b);
     }
