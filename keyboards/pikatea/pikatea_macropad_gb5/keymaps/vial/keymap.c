@@ -17,16 +17,7 @@
 
 // use the names from vial.json
 enum blender_keycode {
-    RGB_USER_GREEN = QK_KB_0,
-    RGB_USER_RED,
-    RGB_USER_BLUE,
-    RGB_USER_WHITE,
-    RGB_USER_YELLOW,
-    RGB_USER_ORANGE,
-    RGB_USER_CYAN,
-    RGB_USER_PURPLE,
-    RGB_USER_DEFAULT,
-    RGB_MY_EFFECT
+    RGB_MY_EFFECT = QK_KB_0,
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -56,45 +47,3 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
     [3] =   { ENCODER_CCW_CW(_______, _______),   },
 };
 #endif
-
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case RGB_USER_GREEN:
-            rgb_matrix_mode(RGB_MATRIX_CUSTOM_my_green_effect);
-            return false;
-        case RGB_USER_RED:
-            rgb_matrix_mode(RGB_MATRIX_CUSTOM_my_red_effect);
-            return false;
-        case RGB_USER_BLUE:
-            rgb_matrix_mode(RGB_MATRIX_CUSTOM_my_blue_effect);
-            return false;
-        case RGB_USER_WHITE:
-            rgb_matrix_mode(RGB_MATRIX_CUSTOM_my_white_effect);
-            return false;
-        case RGB_USER_YELLOW:
-            rgb_matrix_mode(RGB_MATRIX_CUSTOM_my_yellow_effect);
-            return false;
-        case RGB_USER_ORANGE:
-            rgb_matrix_mode(RGB_MATRIX_CUSTOM_my_orange_effect);
-            return false;
-        case RGB_USER_CYAN:
-            rgb_matrix_mode(RGB_MATRIX_CUSTOM_my_cyan_effect);
-            return false;
-        case RGB_USER_PURPLE:
-            rgb_matrix_mode(RGB_MATRIX_CUSTOM_my_purple_effect);
-            return false;
-        case RGB_USER_DEFAULT:
-            rgb_matrix_mode(RGB_MATRIX_SOLID_COLOR);
-            return false;
-        case RGB_MY_EFFECT:
-            rgb_matrix_mode(RGB_MATRIX_CUSTOM_my_effect);
-            return false;
-        default:
-            return true;
-    }
-}
-
-void keyboard_post_init_user(void) {
-  // Call the post init code.
-  rgb_matrix_mode(RGB_MATRIX_CUSTOM_my_effect);
-}

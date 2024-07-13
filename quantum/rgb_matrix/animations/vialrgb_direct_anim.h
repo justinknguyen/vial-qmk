@@ -8,11 +8,20 @@ extern HSV g_direct_mode_colors[RGB_MATRIX_LED_COUNT];
 bool VIALRGB_DIRECT(effect_params_t* params) {
     RGB_MATRIX_USE_LIMITS(led_min, led_max);
 
-    for (uint8_t i = led_min; i < led_max; i++) {
-        RGB rgb = rgb_matrix_hsv_to_rgb(g_direct_mode_colors[i]);
+    HSV hsv_colors[5] = {
+        {0, 255, rgb_matrix_config.hsv.v},   // Red
+        {191, 255, rgb_matrix_config.hsv.v}, // Purple
+        {43, 255, rgb_matrix_config.hsv.v},  // Yellow
+        {180, 255, rgb_matrix_config.hsv.v}, // Blue
+        {150, 255, rgb_matrix_config.hsv.v}  // Cyan
+    };
+
+    for (uint8_t i = 0; i < 5; i++) {
+        RGB rgb = rgb_matrix_hsv_to_rgb(hsv_colors[i]);
         rgb_matrix_set_color(i, rgb.r, rgb.g, rgb.b);
     }
-    return led_max < RGB_MATRIX_LED_COUNT;
+
+    return rgb_matrix_check_finished_leds(led_max);
 }
 #    endif
 #endif
