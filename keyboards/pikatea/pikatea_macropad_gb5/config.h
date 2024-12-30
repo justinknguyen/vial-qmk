@@ -25,7 +25,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define NOP_FUDGE 0.4
 
 #ifdef WS2812_DI_PIN
-#    define RGBLIGHT_SLEEP
 #    define RGBLIGHT_LAYERS
 /*== all animations enable ==*/
 #    define RGBLIGHT_ANIMATIONS

@@ -27,8 +27,8 @@ enum blender_keycode {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT(
-        M1, M2, M3, M4, M5, KC_SLEP, 
-        M6, M7
+        KC_MEDIA_PREV_TRACK, KC_MEDIA_PLAY_PAUSE, KC_MEDIA_NEXT_TRACK, M4, M5, KC_SLEP, 
+        KC_AUDIO_VOL_DOWN, KC_AUDIO_VOL_UP
     ),
     [1] = LAYOUT(
         _______,    _______,    _______,    _______,    _______,    _______,
@@ -46,7 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 #if defined(ENCODER_MAP_ENABLE)
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
-    [0] =   { ENCODER_CCW_CW(M6, M7),   },
+    [0] =   { ENCODER_CCW_CW(KC_AUDIO_VOL_DOWN, KC_AUDIO_VOL_UP),   },
     [1] =   { ENCODER_CCW_CW(_______, _______),   },
     [2] =   { ENCODER_CCW_CW(_______, _______),   },
     [3] =   { ENCODER_CCW_CW(_______, _______),   },
