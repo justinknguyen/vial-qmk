@@ -34,11 +34,11 @@ bool VIALRGB_DIRECT(effect_params_t* params) {
     // #define HSV_YELLOW       43, 255, 255
 
     HSV hsv_colors[5] = {
-        {0, 255, rgb_matrix_config.hsv.v},   // Red
-        {191, 255, rgb_matrix_config.hsv.v}, // Purple
-        {43, 255, rgb_matrix_config.hsv.v},  // Yellow
-        {175, 255, rgb_matrix_config.hsv.v}, // Blue
-        {128, 255, rgb_matrix_config.hsv.v}  // Cyan
+        {191, 255, rgb_matrix_config.hsv.v},   // Purple
+        {0, 255, rgb_matrix_config.hsv.v}, // Red
+        {170, 255, rgb_matrix_config.hsv.v},  // Blue
+        {128, 255, rgb_matrix_config.hsv.v}, // Cyan
+        {43, 255, rgb_matrix_config.hsv.v}  // Yellow
     };
 
     for (uint8_t i = led_min; i < led_max; i++) {

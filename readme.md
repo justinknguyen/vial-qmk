@@ -8,6 +8,15 @@
 
 This is a keyboard firmware based on the [tmk\_keyboard firmware](https://github.com/tmk/tmk_keyboard) with some useful features for Atmel AVR and ARM controllers, and more specifically, the [OLKB product line](https://olkb.com), the [ErgoDox EZ](https://ergodox-ez.com) keyboard, and the Clueboard product line.
 
+## Compile Pikatea Macropad GB5
+
+Open QMK MSYS in admin and enter the following command:
+
+```
+qmk compile -kb pikatea/pikatea_macropad_gb5 -km vial
+```
+Once the .UF2 file is created, plug the macropad in while holding down the left-most switch. A popup File Explorer window will open, where you drag and drop the .UF2 file into.
+
 ## Documentation
 
 * [See the official documentation on docs.qmk.fm](https://docs.qmk.fm)
